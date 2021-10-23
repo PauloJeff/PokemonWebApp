@@ -1,0 +1,39 @@
+﻿@page
+@model PokemonWebApp.Pages.Pokemons.DetailModel
+@{
+}
+<div class="row">
+    <div class="col-md-12">
+        <img class="mx-auto d-block" src="@Html.DisplayFor(model => Model.Pokemon.image)"
+             alt="Imagem do @Html.DisplayFor(model => Model.Pokemon.nome)" />
+        <h1 class="text-center">@Html.DisplayFor(model => Model.Pokemon.nome)</h1>
+    </div>
+    <hr />
+    <div class="col-md-6">
+        <h3>Tipo: @Html.DisplayFor(model => Model.Pokemon.tipo)</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Poderes: @Html.DisplayFor(model => Model.Pokemon.poderes)</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Peso: @Html.DisplayFor(model => Model.Pokemon.peso)</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Altura: @Html.DisplayFor(model => Model.Pokemon.altura)</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Elemento: @Html.DisplayFor(model => Model.Pokemon.elemento)</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Evolucao: @Html.DisplayFor(model => Model.Pokemon.evolucao)</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Velocidade: @Html.DisplayFor(model => Model.Pokemon.velocidade)</h3>
+    </div>
+</div>
+<div class="row">
+    <a class="btn btn-outline-primary"
+       asp-page="/Pokemons/Edit"
+       asp-route-id="@Model.Pokemon.ID">Editar</a>
+    <a class="btn btn-outline-danger">Deletar</a>
+</div>
